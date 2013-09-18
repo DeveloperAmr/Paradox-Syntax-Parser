@@ -101,7 +101,7 @@ namespace SyntaxParser
                     for (; i < file.Length ; i++)
                     {
                         line = SplitComments(file[i])[0];
-                        if (line.Contains("}") && !line.Contains("\t"))
+                        if (line.Contains("}") && !line.TrimEnd('\t').Contains("\t"))
                         {
                             break;
                         }
